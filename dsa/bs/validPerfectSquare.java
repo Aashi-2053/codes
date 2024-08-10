@@ -1,3 +1,5 @@
+package com.dsa.ds
+    
 class Solution {
     public boolean isPerfectSquare(int a) {
        int min=1;
