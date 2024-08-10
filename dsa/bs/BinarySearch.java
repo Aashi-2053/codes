@@ -1,4 +1,4 @@
-package com.dsa;
+package com.dsa.ds;
 
 public class Binary_Search {
     static int binary(int [] a,int target)
