@@ -12,22 +12,31 @@ public class HCF_LCM {
         }
         return h;
     }
+    static int gcd(int a,int b){
+
+        if(a==0)return b;
+
+        return gcd(b%a,a);//euclid algo
+    }
     //lcm
-    static int lcm(int n,int m) {
-        int l = Math.max(n, m);
+    static int lcm(int a,int b) {
+        /*int l = Math.max(n, m);
         while (true) {
             if (l % n == 0 && l % m == 0)
                 return l;
             ++l;
-            //lcm=(n*m)/hcf
-        }
+            */
+
+           return a*b/gcd(a,b);
+
     }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter two number : ");
         int n=sc.nextInt();
         int m=sc.nextInt();
-        System.out.println("HCF of "+n+" is "+hcf(n,m));
+        //System.out.println("HCF of "+n+" is "+hcf(n,m));
         System.out.println("LCM of "+n+" is "+lcm(n,m));
+        System.out.println("gcd "+gcd(3,9));
     }
 }
