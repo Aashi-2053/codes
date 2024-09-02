@@ -20,7 +20,7 @@ public class Rotated_BS_recur {
         if (k >= a[mid] && k <= a[e]) {
             return search(a, k, mid + 1, e);
         }
-            return search(a, k, mid + 1, e);
+            return search(a, k, s, mid-1);
 
 
 
