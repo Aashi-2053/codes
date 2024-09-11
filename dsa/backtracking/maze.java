@@ -18,6 +18,12 @@ public class Maze {
             System.out.println(p);
             return;
         }
+            /*diagonal
+        if(r>1 && c>1)
+        {
+            path(p+'Dia',r-1,c-1);
+        }
+         */
         if(r>1)
         {
             path(p+'D',r-1,c);
