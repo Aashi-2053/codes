@@ -109,6 +109,20 @@ public class LL1 {
         }
         System.out.println("NULL");
     }
+    private Node insertRec(int data, int idx, Node node){
+        if(idx==0)
+        {
+           Node temp=new Node(data,node);
+            size++;
+            return temp;
+        }
+        node.next=insertRec(data,idx-1,node.next);
+        return node;
+    }
+    public void insertRec(int data,int index){
+        head=insertRec(data,index,head);
+    }
+
 
 
     public static void main(String[] args) {
@@ -125,5 +139,9 @@ public class LL1 {
         list.display();
         list.delete(2);
         list.display();
+        list.insertRec(32,3);
+        list.insertRec(12,1);
+        list.display();
+
     }
 }
