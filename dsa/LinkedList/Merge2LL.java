@@ -1,6 +1,6 @@
 package com.dsa.LL;
 
-
+//21 leetcode
 public class Merge2LL{
     private Node head,tail;
     private int size;
