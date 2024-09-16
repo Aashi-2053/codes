@@ -27,9 +27,9 @@ public class Solution {
     }
 }
 //length of Linked List
-   public int CycleLength(Node head) {
-            Node fast=head;
-            Node slow=head;
+   public int CycleLength(ListNode head) {
+            ListNode fast=head;
+            ListNode slow=head;
             if(head==null)
                 return false;
             while(fast!=null && fast.next!=null)
