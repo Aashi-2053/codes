@@ -26,22 +26,22 @@ public class Traversal {
         InOrder(root);
     }
     private void InOrder(Node node){
-        //n->l->r
+        //l->n->r
         if(node==null)
         {return;}
-        preOrder(node.left);
+        InOrder(node.left);
         System.out.println(node.val+" ");
-        preOrder(node.right);
+        InOrder(node.right);
     }
     public void postOrder(){
         postOrder(root);
     }
     private void postOrder(Node node){
-        //n->l->r
+        //l->r->n
         if(node==null)
         {return;}
-        preOrder(node.left);
-        preOrder(node.right);
+        postOrder(node.left);
+        postOrder(node.right);
         System.out.println(node.val+" ");
     }
 
