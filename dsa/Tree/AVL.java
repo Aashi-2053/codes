@@ -17,11 +17,9 @@ public class AVL {
             if(node==null)return -1;
             return node.height;
         }
-        public boolean isEmpty(){
-            return root==null;
-        }
 
         public void insert(int val){
+
             root=insert(val,root);
         }
         private Node insert(int val, Node node){
@@ -52,7 +50,7 @@ public class AVL {
                    return rightRotate(node);
                }
            }
-            if( height(node.left)-height(node.right)<-1){
+            if( height(node.left)-height(node.right)< -1){
                 //right heavy
                 if( height(node.right.left)-height(node.right.right)<0)//posi
                 {
@@ -62,7 +60,7 @@ public class AVL {
                 if( height(node.right.left)-height(node.right.right)>0)//nega
                 {
                     //right left case
-                    node.left=rightRotate(node.left);
+                    node.right=rightRotate(node.right);
                     return leftRotate(node);
                 }
             }
@@ -116,7 +114,11 @@ public class AVL {
             populateSorted(nums,s,mid);
             populateSorted(nums,mid+1,e);
         }
-        public boolean balanced(){
+    public boolean isEmpty() {
+        return root == null;
+    }
+
+    public boolean balanced(){
             return balanced(root);
         }
         private boolean balanced(Node node){
