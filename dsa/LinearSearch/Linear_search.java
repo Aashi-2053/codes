@@ -8,7 +8,7 @@ public class Linear_search {
         }
         return -1;
     }
-
+//
     public static void main(String[] args) {
         int[] nums = {6, 99, 5, 70, 2, 88, 33, 9};
         int target = 70;
