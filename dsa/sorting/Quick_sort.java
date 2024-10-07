@@ -6,7 +6,7 @@ public class Quick_sort {
     // at its correct position in the sorted array and put all smaller elements to the
     // left of the pivot, and all greater elements to the right of the pivot.
     //Partition is done recursively on each side of the pivot after the pivot is placed
-    // in its correct position and this finally sorts the array.
+    // in its correct position and this finally sorts the array
    static int partition(int [] a,int l,int h){
       //worst - O(n^2) when pivot smallest
        // avg- O(nlogn)
